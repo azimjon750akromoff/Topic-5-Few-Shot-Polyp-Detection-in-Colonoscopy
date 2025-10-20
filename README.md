@@ -1,5 +1,5 @@
 # FewShot-Polyp-Detection
-**Team Percepta’s project on few-shot object detection for medical imaging — enabling polyp detection with minimal labeled data.**
+**Team 404 Polyps Not Found’s project on few-shot object detection for medical imaging — enabling polyp detection with minimal labeled data.**
 
 ---
 
@@ -112,4 +112,4 @@ This project is conducted as part of the **Central Asian University — Computer
 ---
 
 ## 🌐 Repository Link
-[https://github.com/your-username/FewShot-Polyp-Detection](https://github.com/your-username/FewShot-Polyp-Detection) (Replace with your actual repo link)
+https://github.com/azimjon750akromoff/Topic-5-Few-Shot-Polyp-Detection-in-Colonoscopy
