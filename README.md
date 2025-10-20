@@ -112,4 +112,4 @@ This project is conducted as part of the **Central Asian University — Computer
 ---
 
 ## 🌐 Repository Link
-[https://github.com/your-username/FewShot-Polyp-Detection](https://github.com/your-username/FewShot-Polyp-Detection) (Replace with your actual repo link)
+(https://github.com/azimjon750akromoff/Topic-5-Few-Shot-Polyp-Detection-in-Colonoscopy)
