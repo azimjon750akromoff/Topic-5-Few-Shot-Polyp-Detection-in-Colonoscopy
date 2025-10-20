@@ -1,5 +1,5 @@
 # FewShot-Polyp-Detection
-**Team Percepta’s project on few-shot object detection for medical imaging — enabling polyp detection with minimal labeled data.**
+**Team 404 Polyps Not Found’s project on few-shot object detection for medical imaging — enabling polyp detection with minimal labeled data.**
 
 ---
 
