@@ -2,49 +2,33 @@ import torch
 import torch.nn as nn
 import timm
 
+
 class PromptTunedViT(nn.Module):
-    """
-    Few-Shot Prompt-Tuned Vision Transformer (ViT)
-    Author: Sanjar Raximjonov
-    """
-
-    def __init__(
-        self,
-        base_model: str = 'vit_base_patch16_224',
-        num_classes: int = 2,
-        prompt_len: int = 10,
-    ):
+    def __init__(self, num_classes=2, prompt_length=5):
         super().__init__()
+        self.base_model = timm.create_model("vit_base_patch16_224", pretrained=True)
+        embed_dim = self.base_model.embed_dim
 
-        self.vit = timm.create_model(base_model, pretrained=True)
+        self.prompt = nn.Parameter(torch.randn(1, prompt_length, embed_dim))
+        self.num_classes = num_classes
 
-        for param in self.vit.parameters():
-            param.requires_grad = False
+        self.classifier = nn.Linear(embed_dim, num_classes)
+        self.base_model.head = nn.Identity()
 
-        self.embed_dim = self.vit.embed_dim
-
-        self.prompts = nn.Parameter(torch.randn(prompt_len, self.embed_dim))
-
-        self.head = nn.Sequential(
-            nn.LayerNorm(self.embed_dim),
-            nn.Linear(self.embed_dim, num_classes)
-        )
+        cls_token = self.base_model.pos_embed[:, :1, :]
+        patch_embed = self.base_model.pos_embed[:, 1:, :]
+        prompt_embed = patch_embed[:, :prompt_length, :].clone()
+        new_pos_embed = torch.cat([cls_token, prompt_embed, patch_embed], dim=1)
+        self.base_model.pos_embed = nn.Parameter(new_pos_embed)
 
     def forward(self, x):
-        """
-        x: [B, 3, 224, 224]
-        """
         B = x.shape[0]
-
-        x = self.vit.patch_embed(x)  # [B, N, D]
-
-        P = self.prompts.unsqueeze(0).expand(B, -1, -1)  # [B, L, D]
-        x = torch.cat([P, x], dim=1)  # [B, L+N, D]
-
-        for blk in self.vit.blocks:
-            x = blk(x)
-
-        x = x.mean(dim=1)
-
-        out = self.head(x)
+        x = self.base_model.patch_embed(x)
+        x = torch.cat([self.prompt.repeat(B, 1, 1), x], dim=1)
+        cls_token = self.base_model.cls_token.expand(B, -1, -1)
+        x = torch.cat((cls_token, x), dim=1)
+        x = self.base_model.pos_drop(x + self.base_model.pos_embed)
+        x = self.base_model.blocks(x)
+        x = self.base_model.norm(x)
+        out = self.classifier(x[:, 0])
         return out
