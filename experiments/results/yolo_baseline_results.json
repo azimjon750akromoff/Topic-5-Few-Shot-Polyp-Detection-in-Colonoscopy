@@ -1,0 +1,13 @@
+{
+  "model": "YOLOv8",
+  "model_size": "n",
+  "n_shot": 5,
+  "epochs": 10,
+  "metrics": {
+    "map50": 0.6633333333333333,
+    "map50_95": 0.6633333333333333,
+    "precision": 0.003663003663003663,
+    "recall": 1.0
+  },
+  "training_time": 1764059424.9734058
+}

@@ -29,7 +29,9 @@ def generate_cam(model, x):
     side = int(np.sqrt(len(cams) - 1))
     cam = cams[1:1 + side*side].reshape(side, side)
     cam = np.maximum(cam, 0)
-    cam /= cam.max()
+    cam_max = cam.max()
+    if cam_max > 0:
+        cam /= cam_max
 
     h.remove()
     return cam, pred

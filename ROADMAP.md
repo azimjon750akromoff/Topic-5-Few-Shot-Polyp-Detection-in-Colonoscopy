@@ -12,12 +12,12 @@
 | Week | Dates | Milestone / Task | Deliverable | Owner(s) |
 |------|--------|------------------|--------------|-----------|
 | **W1** | Oct 14–21 | Team formation, topic confirmation, and repo setup | GitHub repo with README.md and ROADMAP.md created | All |
-| **W2** | Oct 21–27 | Literature review and dataset preparation | Summary table of related papers; Kvasir-SEG & CVC-ClinicDB downloaded and verified | Saidmahmud |
+| **W2** | Oct 21–27 | Literature review and dataset preparation | Summary table of related papers; Kvasir-SEG & CVC-ClinicDB downloaded and verified | Azimjon + Sanjar |
 | **W3** | Oct 28–Nov 3 | Baseline models (YOLO & Mask R-CNN) in 5-shot setting | Scripts for 5-shot training; initial mAP results on validation set | Azimjon |
 | **W4** | Nov 4–10 | Few-shot model implementation (Prompt-tuned ViT / Meta-learning) | Code for the proposed few-shot detection model | Sanjar |
 | **W5** | Nov 11–17 | Evaluation & Explainability | Full evaluation vs. baselines; attention/Grad-CAM visualizations | Azimjon |
 | **W6** | Nov 18–24 | Results analysis & report drafting | Comprehensive results table; first draft of final report | All |
-| **W7** | Nov 25–Dec 1 | Final report writing & presentation prep | Final project report (PDF); presentation slides | Saidmahmud |
+| **W7** | Nov 25–Dec 1 | Final report writing & presentation prep | Final project report (PDF); presentation slides | Azimjon + Sanjar |
 | **W8** | Dec 2–8 | Final refinements & presentation | Code cleanup, final model weights, presentation rehearsal | All |
 
 ---
@@ -28,7 +28,7 @@ Use this section to log updates as you work each week.
 Each update should include **3–6 short bullet points** about progress, challenges, or changes.
 
 ### Week 1 (Oct 14–21)
-- [x] Formed Team Percepta with new members (Azimjon, Sanjar, Saidmahmud)
+- [x] Formed Team Percepta with new members (Azimjon, Sanjar, Azimjon + Sanjar)
 - [x] Selected Project #5: Few-Shot Polyp Detection
 - [x] Created and populated GitHub repository
 
@@ -67,11 +67,11 @@ Each update should include **3–6 short bullet points** about progress, challen
 | Task | Responsible | Accountable | Consulted | Informed |
 |------|--------------|--------------|------------|-----------|
 | Repo setup & documentation | Azimjon | All | — | Instructor |
-| Literature review & Data Prep | Saidmahmud | Azimjon | Sanjar | Instructor |
+| Literature review & Data Prep | Azimjon + Sanjar | Azimjon | Sanjar | Instructor |
 | Baseline Model Implementation | Azimjon | Sanjar | — | Team |
-| Few-Shot Model Implementation | Sanjar | Azimjon | Saidmahmud | Team |
+| Few-Shot Model Implementation | Sanjar | Azimjon | Azimjon + Sanjar | Team |
 | Evaluation & Visualization | Azimjon | All | — | Instructor |
-| Report & Presentation | Saidmahmud | All | — | Instructor |
+| Report & Presentation | Azimjon + Sanjar | All | — | Instructor |
 
 ---
 

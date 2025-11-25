@@ -7,6 +7,7 @@ from src.models.prompt_vit import PromptTunedViT
 from src.datasets.polyp_dataset import PolypDataset
 
 
+
 def train_model(epochs=1, batch=8, lr=1e-4):
     device = "cuda" if torch.cuda.is_available() else "cpu"
     print("🚀 Training on:", device)

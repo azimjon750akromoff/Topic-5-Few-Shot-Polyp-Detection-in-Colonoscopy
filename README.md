@@ -15,7 +15,6 @@ Our research focuses on bridging the gap between data-efficient learning and cri
 |------|-------------|--------|------|
 | Azimjon Akromov | 220291 | 220291@centralasian.uz | Model architecture & repo management |
 | Sanjar Raximjonov | 220304 | 220304@centralasian.uz | Experiments & evaluation metrics |
-| Tolqinxojayev Saidmahmud | 220452 | 220452@centralasian.uz | Dataset preparation & report writing |
 
 ---
 
@@ -62,7 +61,7 @@ These datasets are standard benchmarks for polyp detection and segmentation task
 | Week | Milestone | Owner |
 |------|------------|--------|
 | Week 1 | Team formation & topic selection | All |
-| Week 2 | Related work summary + dataset setup | Saidmahmud |
+| Week 2 | Related work summary + dataset setup | Azimjon + Sanjar |
 | Week 3 | Baseline YOLO & Mask R-CNN (5-shot) | Azimjon |
 | Week 4 | Few-shot model implementation | Sanjar |
 | Week 5 | Evaluation & explainability | Azimjon |
@@ -113,3 +112,19 @@ This project is conducted as part of the **Central Asian University — Computer
 
 ## 🌐 Repository Link
 [https://github.com/your-username/FewShot-Polyp-Detection](https://github.com/your-username/FewShot-Polyp-Detection) (Replace with your actual repo link)
+
+
+
+
+## First we run train.py ; then eval.py ; then explainability.py - this will get us 2-output results !
+
+
+
+### MINE : **W3** | Oct 28–Nov 3 | Baseline models (YOLO & Mask R-CNN) in 5-shot setting | Scripts for 5-shot training; initial mAP results on validation set | Azimjon |
+
+
+
+# cd "/Users/azimjonakromov/Desktop/Sanjar + me - Computer vision/Topic-5-Few-Shot-Polyp-Detection-in-Colonoscopy"
+# ./venv/bin/python -m src.train
+# ./venv/bin/python -m src.eval 
+# ./venv/bin/python -m src.explainability
