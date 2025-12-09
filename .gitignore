@@ -10,58 +10,41 @@ env/
 venv/
 
 # Data folders (large datasets)
-data/**/*.{png,jpg,jpeg,tif,tiff}
-datasets/**/*.{png,jpg,jpeg,tif,tiff}
-real_dataset/**/*.{png,jpg,jpeg,tif,tiff}
-full_real/**/*.{png,jpg,jpeg,tif,tiff}
-
-CVC-ClinicDB/**/*.{png,jpg,jpeg,tif,tiff}
-kvasir-dataset-v2/**/*.{png,jpg,jpeg,tif,tiff}
-Kvasir-SEG/**/*.{png,jpg,jpeg,tif,tiff}
-CVC-ColonDB/**/*.{png,jpg,jpeg,tif,tiff}
+data/
+datasets/
+real_dataset/
+full_real/
+CVC-ClinicDB/
+kvasir-dataset-v2/
+Kvasir-SEG/
+CVC-ColonDB/
 
 # Experiment outputs
-experiments/checkpoints/
 *.pt
 *.pth
 *.ckpt
 
 !experiments/results/
 !experiments/results/**
-!experiments/results/**/*.{png,jpg,jpeg,tif,tiff}
+!experiments/results/**/*
 
 !runs/
 !runs/detect/
 !runs/detect/**
-!runs/detect/**/*.{png,jpg,jpeg,tif,tiff}
+!runs/detect/**/*
 
-# Images (dataset)
-*.tif
-*.tiff
-*.png
-*.jpg
-
-# BUT keep sample_images
 !sample_images/
-!sample_images/*.png
-!sample_images/*.jpg
-!sample_images/*.jpeg
+!sample_images/**
+!sample_images/**/*
 
-# ALSO keep results images (visualizations/gradcam)
-!experiments/results/**/*.png
-!experiments/results/**/*.jpg
-!experiments/results/**/*.jpeg
-
-# Jupyter
+#IDE
 .ipynb_checkpoints/
-
-# IDE
 .idea/
 .vscode/
 *.code-workspace
 
-# LOGS
 
+# LOGS
 *.log
 tmp/
 temp/
